@@ -5,5 +5,23 @@
     </head>
     <body>
         <h1>Welcome to FavPoints!</h1>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAJZWlzpVn4NFe03fnQPPDXj-3qMhlz9Io",
+            authDomain: "favpoints-users.firebaseapp.com",
+            databaseURL: "https://favpoints-users.firebaseio.com",
+            projectId: "favpoints-users",
+            storageBucket: "",
+            messagingSenderId: "462472980489"
+        };
+        firebase.initializeApp(config);
+        
+        function registerUser(username, password){
+            firebase.database().ref('Users').set({username: username, password: password});
+        }
+    </script>
     </body>
 </html>
