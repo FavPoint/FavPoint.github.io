@@ -10,7 +10,7 @@
 		</style>
 	</head>
 	<body>
-		<p class = "indieflowercursive" style = 'font-size: 48px; text-align:center;'>Welcome to FavPoints</p>
+		<p class = "indieflowercursive" style = 'font-size: 100px; text-align:center;'>Welcome to FavPoints</p>
 		<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
 		<script>
 			// Initialize Firebase
@@ -26,7 +26,7 @@
 
 			function registerUser(username, password){
 				firebase.database().ref('Users').set({username: username, password: password});
-			}//hi
+			}
 		</script>
 	</body>
 </html>
