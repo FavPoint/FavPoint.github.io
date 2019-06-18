@@ -5,6 +5,18 @@
 		<link href="//fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 		<link href="//fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 		<style>
+			body {
+				-webkit-animation-delay: 0.1s;
+				-webkit-animation-name: fontfix;
+				-webkit-animation-duration: 0.1s;
+				-webkit-animation-iteration-count: 1;
+				-webkit-animation-timing-function: linear;
+			}
+
+			@@-webkit-keyframes fontfix {
+				from { opacity: 1; }
+				to   { opacity: 1; }
+			}
 			ul {
 			  list-style-type: none;
 			  margin: 0;
@@ -108,6 +120,7 @@
 			</marquee>
 		</div>
 		<p align="center">Here at FavPoints you may exchange a virtual currency in return of favors.</p>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
 		<script>
 			// Initialize Firebase
@@ -124,6 +137,11 @@
 			function registerUser(username, password){
 				firebase.database().ref('Users').set({username: username, password: password});
 			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('head').append('<link href="/chrome.css" rel="stylesheet" />');
+			});
 		</script>
 	</body>
 </html>
